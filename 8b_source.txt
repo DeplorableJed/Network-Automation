@@ -1,0 +1,6 @@
+    for item in json_string['data']:
+        system_ip=item['system-ip']
+        print('{0:15}  {1:20}  {2}     {3:36}  '.format("System IP", "Hostname", "Version","UUID"))
+        print('{0:15}  {1:20}  {2}     {3:36}  '.format("---------", "--------", "-------","------------------------------------"))
+        print('{0:15}  {1:20}  {2}     {3:36}  '.format(item['system-ip'],item['host-name'],item['version'],item['uuid']))
+
