@@ -2,23 +2,19 @@ import getpass
 import sys
 import telnetlib
 
-host = "10.X.0.1"
+host = "10.X.0.1" #replace X with your pod number
 user = input("Enter your telnet username: ")
 password = getpass.getpass()
-
 telcon = telnetlib.Telnet(host)
-
-telcon.read_until("Username: ")
-telcon.write(user + "\n")
+telcon.read_until(b"Username: ")
+telcon.write(user.encode("ascii") + b"\n")
 if password:
-    telcon.read_until("Password: ")
-    telcon.write(password + "\n")
+    telcon.read_until(b"Password: ")
+    telcon.write(password.encode("ascii") + b"\n")
+telcon.write(b"conf t\n")
+telcon.write(b"int loop 9\n")
+telcon.write(b"ip address 9.0.0.1 255.255.255.255\n")
+telcon.write(b"end\n")
+telcon.write(b"exit\n")
 
-# Change X to your pod number in this section
-telcon.write("conf t\n")
-telcon.write("int loop 9\n")
-telcon.write("ip address 9.9.9.X 255.255.255.255\n")
-telcon.write("end\n")
-telcon.write("exit\n")
-
-print telcon.read_all()
+print (telcon.read_all().decode("ascii"))
