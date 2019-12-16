@@ -5,7 +5,7 @@
 #     - Your family Name
 #     - Your age
 #     - Your country of residence
-# 2. Using @operators print out the following sentence *<first name> <last name> is <age> years old and lives in <country>*
+# 2. Using % operators print out the following sentence *<first name> <last name> is <age> years old and lives in <country>*
 #     - substitute the values you collected into the sentence dynamically
 # 3. Use the .format function to print out the same sentence and variables dynamically
 # 4. Use an f string to print out the same sentence and variables
