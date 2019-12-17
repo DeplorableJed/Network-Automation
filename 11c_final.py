@@ -46,7 +46,7 @@ for target in routers:
         print ('\n' + 'End of attempting device: ' + str(target))
         print ("*"*80)
         continue
-    except (unknown_error):
+    except:
         print ("\n" + "*"*80)
         print ('Some other error! ' + str(target))
         print ("*"*80)
