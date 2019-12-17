@@ -1,7 +1,7 @@
 import paramiko
 import time
 
-routers = routers = ["10.3.0.1", "10.3.1.2", "10.3.3.3"]
+routers = routers = ["10.X.0.1", "10.X.1.2", "10.X.3.3"]
 username = "Admin"
 password = "NterOne1!"
 
