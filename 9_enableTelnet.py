@@ -10,7 +10,7 @@ sshcon.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 for target in routers:
     sshcon.connect(hostname=target,username=username,password=password)
     print ("Successful connection", target)
-    remote_connection = sshcon.invokeshell()
+    remote_connection = sshcon.invoke_shell()
     remote_connection.send("configure terminal\n")
     remote_connection.send("line vty 0 4\n")
     remote_connection.send("transport input all\n")
