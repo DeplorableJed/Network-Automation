@@ -11,14 +11,6 @@ systemip = "172.1.30.3"
 
 def initalize_connection(serveraddress,username,password):
 
-    """
-    This function will initialize a connection to thevManage
-    :param ipaddress: This is the IP Address and Port number of vManage 
-    :param username:  This is the username for vManage (admin in our lab)
-    :param password:  This is a password for vManage (admin in our lab)
-    These will be set in a file called package_config.ini
-    """
-
     # Disable warnings like unsigned certificates, etc.
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
