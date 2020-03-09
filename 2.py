@@ -7,7 +7,7 @@
 #    - Indent the fisrt line with a tab
 #    - Print the paragraph to the screen and verify output
 # 3. Print the value between the stars *Jed's mom said "Hello World!"*
-# 4. Have the scrip prompt and collect the 4 following values:
+# 4. Have the script prompt and collect the 4 following values:
 #    - Your favorite color
 #    - Your favorite food
 #    - Your favorite drink
