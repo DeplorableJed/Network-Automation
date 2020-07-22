@@ -1,0 +1,19 @@
+!
+interface Tunnel201
+ ip vrf forwarding REMOTE
+ ip address 172.16.201.2 255.255.255.0
+ tunnel source Loopback200
+ tunnel destination 172.16.200.2
+!
+interface GigabitEthernet3
+ description to 172.16.202.50
+ ip vrf forwarding REMOTE
+ ip address 172.16.299.5 255.255.255.0
+!
+interface Loopback100
+ ip address 10.93.130.33 255.255.255.255
+!
+router eigrp 100
+ network 10.100.1.1 0.0.0.0
+ network 172.16.0.0 0.0.255.255
+
