@@ -12,7 +12,7 @@ import requests
 import urllib3
 from requests.auth import HTTPBasicAuth  # for Basic Auth 
 from urllib3.exceptions import InsecureRequestWarning  # To ignore insecure https warnings
-
+from pprint import pprint
 from config import DNAC_URL, DNAC_PASS, DNAC_USER #imports the config file one level back and imports 3 variables
 
 urllib3.disable_warnings(InsecureRequestWarning)  # disable insecure https warnings
@@ -68,5 +68,5 @@ print()
 client_ip_add = '1.1.1.1' #Replace with any provisioned device in DNAC
 client_detail = get_client_info(client_ip_add, dnac_jwt_auth)
 print('The information for the client with the IP address: ', client_ip_add)
-utils.pprint(client_detail)
+pprint(client_detail)
 
